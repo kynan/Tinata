@@ -6,11 +6,11 @@
     <div class="list list-inset">
       <label class="item item-input">
         <i class="icon ion-search placeholder-icon"></i>
-        <input type="text" placeholder="Filter countries">
+        <input type="text" placeholder="Filter countries" ng-model="query">
       </label>
     </div>
     <list>
-      <item ng-repeat="country in countries" href="#/tab/countries/{{country.iso}}">{{country.name}}</item>
+      <item ng-repeat="country in countries | filter:query" href="#/tab/countries/{{country.iso}}">{{country.name}}</item>
     </list>
   </content>
 </view>
