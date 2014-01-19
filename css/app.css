@@ -1,8 +1,12 @@
 /* Your app's CSS, go crazy, make it your own */
 
-.ionic-logo {
+.tinata-logo {
   display: block;
   margin: 15px auto;
-  width: 96px;
-  height: 96px;
+  width: 320px;
+  height: 320px;
+}
+
+.text-center {
+  text-align: center;
 }

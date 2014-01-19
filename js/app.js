@@ -23,13 +23,9 @@ angular.module('tinata', ['ionic', 'tinata.services', 'tinata.controllers'])
       templateUrl: "templates/tabs.html"
     })
 
-    .state('tab.home', {
+    .state('home', {
       url: '/home',
-      views: {
-        'home': {
-          templateUrl: 'templates/about.html'
-        }
-      }
+      templateUrl: 'templates/home.html'
     })
 
     // the countries tab has its own child nav-view and history
@@ -63,7 +59,7 @@ angular.module('tinata', ['ionic', 'tinata.services', 'tinata.controllers'])
     });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/home');
+  $urlRouterProvider.otherwise('/home');
 
 });
 
