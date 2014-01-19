@@ -23,32 +23,32 @@ angular.module('tinata', ['ionic', 'tinata.services', 'tinata.controllers'])
       templateUrl: "templates/tabs.html"
     })
 
-    // the pet tab has its own child nav-view and history
-    .state('tab.pet-index', {
-      url: '/pets',
+    .state('tab.home', {
+      url: '/home',
       views: {
-        'pets-tab': {
-          templateUrl: 'templates/pet-index.html',
-          controller: 'PetIndexCtrl'
+        'home': {
+          templateUrl: 'templates/about.html'
         }
       }
     })
 
-    .state('tab.pet-detail', {
-      url: '/pet/:petId',
+    // the countries tab has its own child nav-view and history
+    .state('tab.countries', {
+      url: '/countries',
       views: {
-        'pets-tab': {
-          templateUrl: 'templates/pet-detail.html',
-          controller: 'PetDetailCtrl'
+        'destinations': {
+          templateUrl: 'templates/countries.html',
+          controller: 'CountriesCtrl'
         }
       }
     })
 
-    .state('tab.adopt', {
-      url: '/adopt',
+    .state('tab.country', {
+      url: '/countries/:id',
       views: {
-        'adopt-tab': {
-          templateUrl: 'templates/adopt.html'
+        'destinations': {
+          templateUrl: 'templates/country.html',
+          controller: 'CountryDetailCtrl'
         }
       }
     })
@@ -56,14 +56,14 @@ angular.module('tinata', ['ionic', 'tinata.services', 'tinata.controllers'])
     .state('tab.about', {
       url: '/about',
       views: {
-        'about-tab': {
+        'about': {
           templateUrl: 'templates/about.html'
         }
       }
     });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/pets');
+  $urlRouterProvider.otherwise('/tab/home');
 
 });
 
